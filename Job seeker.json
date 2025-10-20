@@ -1,0 +1,273 @@
+{
+  "name": "Job seeker",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -608,
+        -336
+      ],
+      "id": "e05a5bbb-4e4d-4acf-a6f1-6eef690ab12a",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "fileSelector": "Companies1.ods",
+        "options": {
+          "fileExtension": "ods"
+        }
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        272,
+        -336
+      ],
+      "id": "cddc5103-cac9-44e4-a56a-20982a336bca",
+      "name": "Read/Write Files from Disk"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a professional job outreach email writer. Generate a personalized, compelling email for job opportunities based on the provided details. The output MUST be in valid JSON format with the exact structure shown below.\n\n## INPUT DETAILS:\n- Company Type: {{ $json.Drone }}\n- Company Name: {{ $json['Aerosmart UAE'] }}\n- Company Location: {{ $json.UAE }}\n- Company Description: {{ $json['Specializes in providing various drone solutions and services in the UAE, including sales, maintenance, and flight training, with a focus on commercial drone technology.'] }}\n- Your Name: Faheem\n- Your Phone: 8870682288\n- Your Email: abdulfaheemasd@gmail.com\n- Your LinkedIn: https://www.linkedin.com/in/abdul-faheem-a-04a072200/\n- Your Portfolio: https://areyouroot.github.io/\n- Your Github: https://github.com/areyouroot/\n\n## KEY POINTS TO INCLUDE:\n1. Address the company's specific focus and align it with your career goals\n2. Highlight 2-3 key skills relevant to their business (Security, Full-Stack Development, Innovation, etc.)\n3. Emphasize your entrepreneurial background and experience as a founder\n4. Mention your ability to bring market research and new ideas to the company\n5. Show how your problem-solving skills from failures and successes will benefit them\n6. Specify relevant roles you're interested in (Software Developer, Technology Developer, BDE, etc.)\n\n## OUTPUT FORMAT (Valid JSON):\n{\n  \"Subject\": \"[Strategic/Opportunity/Growth] in [Company Name]'s [Key Focus Area]\",\n  \"Message\": \"Hi sir/madam,\\n\\n[Opening paragraph: Company-specific compliment and alignment with your goals]\\n\\n[Middle paragraph 1: Your background and entrepreneurial experience]\\n\\n[Middle paragraph 2: Specific skills/expertise relevant to their business]\\n\\n[Middle paragraph 3: Roles you're interested in and value proposition]\\n\\n[Closing paragraph: Call to action]\\n\\nThanks for your time and consideration. Have an amazing day!\\n\\nFaheem\\nPH: 8870682288\\nEmail: abdulfaheemasd@gmail.com\\nLinkedIn: https://www.linkedin.com/in/abdul-faheem-a-04a072200/ (check this out you will like it)\\nPortfolio: https://areyouroot.github.io/\\nGithub: https://github.com/areyouroot/\"\n}\n\n## TONE & STYLE:\n- Professional yet personable\n- Confident but humble\n- Action-oriented and specific\n- Show genuine interest in the company\n- Avoid generic phrases; make it custom to their business\n- Use conversational language (not too formal)\n\n## IMPORTANT RULES:\n- Do NOT use \"Dear\" - always start with \"Hi sir/madam,\"\n- Keep the message concise but impactful (150-250 words in main content)\n- Ensure JSON is valid and properly escaped\n- Make every sentence earn its place\n- Focus on VALUE you bring, not just skills\n- End with \"Have an amazing day!\" before signature",
+        "hasOutputParser": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        736,
+        -336
+      ],
+      "id": "28896a75-f57f-4048-8019-d9e1adbf5af6",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "llama3.1:8b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "typeVersion": 1,
+      "position": [
+        736,
+        -48
+      ],
+      "id": "c177f818-523f-4b25-bc7e-c8827ce7c76a",
+      "name": "Ollama Chat Model",
+      "credentials": {
+        "ollamaApi": {
+          "id": "acGYnAx0bcfRF1TB",
+          "name": "Ollama account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "ods",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        496,
+        -336
+      ],
+      "id": "1b66b268-9eb0-4100-9e40-fccbf58e3a88",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "sendTo": "=abdulfaheemasd@gmail.com",
+        "subject": "={{ $json.output }}",
+        "message": "={{ $json.output.replaceAll(\"```json\\n\",\"\").replaceAll(\"\\n```\",\"\") }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1152,
+        -336
+      ],
+      "id": "fcbf5915-5c78-4858-9a89-c8a54a4cb3ea",
+      "name": "Send a message",
+      "webhookId": "e9e6e2c1-58b6-4c40-ac50-3be05c42e92a",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Nc0ow5ePPhNJRE2E",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fileSelector": "Detailed.pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        -208,
+        -336
+      ],
+      "id": "8ecd6a19-8134-4ab2-a8cf-c5c19ac1701a",
+      "name": "Read/Write Files from Disk1"
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        16,
+        -336
+      ],
+      "id": "4f69ea58-5781-4820-8c24-fc2ea94d74f7",
+      "name": "Extract from File1"
+    },
+    {
+      "parameters": {
+        "fileSelector": "resume.pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        -448,
+        -336
+      ],
+      "id": "f8665fc2-d60f-4dc3-801e-ac4eb8933b72",
+      "name": "Read/Write Files from Disk2"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n\t\"Subject\": \"Strategic Software Development Opportunity at OTAKOYI – Driving Innovation in Core Industries\",\n\t\"Message\": \"Hi sir/madam,\\n\\nI’ve been consistently impressed by OTAKOYI’s strategic focus on delivering end-to-end software solutions across Real Estate, Healthcare, and other critical sectors, particularly within the UAE. Given my ambition to contribute to forward-thinking companies with a strong industry impact, I was particularly excited to learn about your work.\\n\\nAs an entrepreneurial founder with a background in Full-Stack Development and a passion for Innovation, I’ve consistently tackled complex challenges and developed robust solutions. My experience includes a deep understanding of security best practices and a proactive approach to developing market-driven technology. I’ve successfully navigated both failures and achievements, honing my problem-solving skills and fostering a resilient mindset, ready to contribute to a dynamic team.\\n\\nI'm particularly interested in roles as a Software Developer, Technology Developer, or Business Development Executive (BDE) where I can leverage my skills to drive innovation and growth within your key industries. I’m confident I can bring a fresh perspective, backed by practical experience, to enhance your service offerings.\\n\\nI'd welcome the opportunity to discuss how my drive and skillset can further benefit OTAKOYI. You can view my portfolio and Github repositories at the links below.\\n\\nThanks for your time and consideration. Have an amazing day!\\n\\nFaheem\\nPH: 8870682288\\nEmail: abdulfaheemasd@gmail.com\\nLinkedIn: https://www.linkedin.com/in/abdul-faheem-a-04a072200/ (check this out you will like it)\\nPortfolio: https://areyouroot.github.io/\\nGithub: https://github.com/areyouroot/\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        912,
+        -144
+      ],
+      "id": "8bfa7dbd-e410-45ff-8c99-deb3cc95caff",
+      "name": "Structured Output Parser"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ollama Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk1": {
+      "main": [
+        [
+          {
+            "node": "Extract from File1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File1": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk2": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "8c4bb532-7f2f-41be-a255-6aba3ad911c0",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "32186dfe806057fb279289d6cc23295d67047901d1d4d157c309e9f630ea64a8"
+  },
+  "id": "wBbC8cfikmKlb1Yv",
+  "tags": []
+}

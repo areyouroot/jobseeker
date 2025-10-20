@@ -1,0 +1,23 @@
+{
+  "name": "jobseeker",
+  "version": "1.0.0",
+  "description": "This is a personalised n8n agent that connects and seeks for job",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/areyouroot/jobseeker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/areyouroot/jobseeker/issues"
+  },
+  "homepage": "https://github.com/areyouroot/jobseeker#readme",
+  "dependencies": {
+    "n8n": "^1.115.3"
+  }
+}
