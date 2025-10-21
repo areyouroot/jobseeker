@@ -6,15 +6,15 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -608,
-        -336
+        0,
+        0
       ],
-      "id": "e05a5bbb-4e4d-4acf-a6f1-6eef690ab12a",
+      "id": "f6693380-36a3-4f30-ac75-6982a8982e96",
       "name": "When clicking ‘Execute workflow’"
     },
     {
       "parameters": {
-        "fileSelector": "Companies1.ods",
+        "fileSelector": "Companies.ods",
         "options": {
           "fileExtension": "ods"
         }
@@ -22,26 +22,26 @@
       "type": "n8n-nodes-base.readWriteFile",
       "typeVersion": 1,
       "position": [
-        272,
-        -336
+        688,
+        0
       ],
-      "id": "cddc5103-cac9-44e4-a56a-20982a336bca",
+      "id": "46c19002-ab8d-4cd0-adf0-e78d94249b79",
       "name": "Read/Write Files from Disk"
     },
     {
       "parameters": {
         "promptType": "define",
-        "text": "=You are a professional job outreach email writer. Generate a personalized, compelling email for job opportunities based on the provided details. The output MUST be in valid JSON format with the exact structure shown below.\n\n## INPUT DETAILS:\n- Company Type: {{ $json.Drone }}\n- Company Name: {{ $json['Aerosmart UAE'] }}\n- Company Location: {{ $json.UAE }}\n- Company Description: {{ $json['Specializes in providing various drone solutions and services in the UAE, including sales, maintenance, and flight training, with a focus on commercial drone technology.'] }}\n- Your Name: Faheem\n- Your Phone: 8870682288\n- Your Email: abdulfaheemasd@gmail.com\n- Your LinkedIn: https://www.linkedin.com/in/abdul-faheem-a-04a072200/\n- Your Portfolio: https://areyouroot.github.io/\n- Your Github: https://github.com/areyouroot/\n\n## KEY POINTS TO INCLUDE:\n1. Address the company's specific focus and align it with your career goals\n2. Highlight 2-3 key skills relevant to their business (Security, Full-Stack Development, Innovation, etc.)\n3. Emphasize your entrepreneurial background and experience as a founder\n4. Mention your ability to bring market research and new ideas to the company\n5. Show how your problem-solving skills from failures and successes will benefit them\n6. Specify relevant roles you're interested in (Software Developer, Technology Developer, BDE, etc.)\n\n## OUTPUT FORMAT (Valid JSON):\n{\n  \"Subject\": \"[Strategic/Opportunity/Growth] in [Company Name]'s [Key Focus Area]\",\n  \"Message\": \"Hi sir/madam,\\n\\n[Opening paragraph: Company-specific compliment and alignment with your goals]\\n\\n[Middle paragraph 1: Your background and entrepreneurial experience]\\n\\n[Middle paragraph 2: Specific skills/expertise relevant to their business]\\n\\n[Middle paragraph 3: Roles you're interested in and value proposition]\\n\\n[Closing paragraph: Call to action]\\n\\nThanks for your time and consideration. Have an amazing day!\\n\\nFaheem\\nPH: 8870682288\\nEmail: abdulfaheemasd@gmail.com\\nLinkedIn: https://www.linkedin.com/in/abdul-faheem-a-04a072200/ (check this out you will like it)\\nPortfolio: https://areyouroot.github.io/\\nGithub: https://github.com/areyouroot/\"\n}\n\n## TONE & STYLE:\n- Professional yet personable\n- Confident but humble\n- Action-oriented and specific\n- Show genuine interest in the company\n- Avoid generic phrases; make it custom to their business\n- Use conversational language (not too formal)\n\n## IMPORTANT RULES:\n- Do NOT use \"Dear\" - always start with \"Hi sir/madam,\"\n- Keep the message concise but impactful (150-250 words in main content)\n- Ensure JSON is valid and properly escaped\n- Make every sentence earn its place\n- Focus on VALUE you bring, not just skills\n- End with \"Have an amazing day!\" before signature",
+        "text": "={\n  \"prompt\": \"You are a professional job outreach email writer. Generate a personalized, compelling email for job opportunities based on the provided details.\\n\\nINPUT DETAILS:\\nCompany Type: Drone\\nCompany Name: Aerosmart UAE\\nCompany Location: UAE\\nCompany Description: Specializes in providing various drone solutions and services in the UAE, including sales, maintenance, and flight training, with a focus on commercial drone technology.\\nYour Name: Faheem\\nYour Phone: 8870682288\\nYour Email: abdulfaheemasd@gmail.com\\nYour LinkedIn: https://www.linkedin.com/in/abdul-faheem-a-04a072200/\\nYour Portfolio: https://areyouroot.github.io/\\nYour Github: https://github.com/areyouroot/\\n\\nKEY POINTS TO INCLUDE:\\n1. Address the company's specific focus and align it with your career goals\\n2. Highlight 2-3 key skills relevant to their business (Security, Full Stack Development, Innovation, etc.)\\n3. Emphasize your entrepreneurial background and experience as a founder\\n4. Mention your ability to bring market research and new ideas to the company\\n5. Show how your problem-solving skills from failures and successes will benefit them\\n6. Specify relevant roles you're interested in (Software Developer, Technology Developer, BDE, etc.)\\n\\nOUTPUT FORMAT:\\nsubject: [Strategic/Opportunity/Growth] in [Company Name]'s [Key Focus Area]\\nmessage: Hi sir/madam,\\n\\n[Opening paragraph: Company specific compliment and alignment with your goals]\\n\\n[Middle paragraph 1: Your background and entrepreneurial experience]\\n\\n[Middle paragraph 2: Specific skills/expertise relevant to their business]\\n\\n[Middle paragraph 3: Roles you're interested in and value proposition]\\n\\n[Closing paragraph: Call to action]\\n\\nThanks for your time and consideration. Have an amazing day!\\n\\nFaheem\\nPH: 8870682288\\nEmail: abdulfaheemasd@gmail.com\\nLinkedIn: https://www.linkedin.com/in/abdul-faheem-a-04a072200/ (check this out you will like it)\\nPortfolio: https://areyouroot.github.io/\\nGithub: https://github.com/areyouroot/\\n\\nTONE & STYLE:\\n- Professional yet personable\\n- Confident but humble\\n- Action-oriented and specific\\n- Show genuine interest in the company\\n- Avoid generic phrases; make it custom to their business\\n- Use conversational language (not too formal)\\n\\nIMPORTANT RULES:\\n- Do NOT use \\\"Dear\\\" - always start with \\\"Hi sir/madam,\\\"\\n- Keep the message concise but impactful (150-250 words in main content)\\n- Make every sentence earn its place\\n- Focus on VALUE you bring, not just skills\\n- End with \\\"Have an amazing day!\\\" before signature\"\n}",
         "hasOutputParser": true,
         "options": {}
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2,
       "position": [
-        736,
-        -336
+        1200,
+        0
       ],
-      "id": "28896a75-f57f-4048-8019-d9e1adbf5af6",
+      "id": "0fcdaef8-74ad-41bf-bf88-0efa496ce23a",
       "name": "AI Agent"
     },
     {
@@ -52,14 +52,14 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
       "typeVersion": 1,
       "position": [
-        736,
-        -48
+        1728,
+        432
       ],
-      "id": "c177f818-523f-4b25-bc7e-c8827ce7c76a",
+      "id": "cee0c1ad-47b7-4767-afd0-9a68d58812b2",
       "name": "Ollama Chat Model",
       "credentials": {
         "ollamaApi": {
-          "id": "acGYnAx0bcfRF1TB",
+          "id": "iCPmZWEh4H5NMHhU",
           "name": "Ollama account"
         }
       }
@@ -72,31 +72,38 @@
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1,
       "position": [
-        496,
-        -336
+        960,
+        0
       ],
-      "id": "1b66b268-9eb0-4100-9e40-fccbf58e3a88",
+      "id": "2aa2f853-0b24-4b40-b150-5d31d4a697f4",
       "name": "Extract from File"
     },
     {
       "parameters": {
-        "sendTo": "=abdulfaheemasd@gmail.com",
-        "subject": "={{ $json.output }}",
-        "message": "={{ $json.output.replaceAll(\"```json\\n\",\"\").replaceAll(\"\\n```\",\"\") }}",
-        "options": {}
+        "sendTo": "={{ $('Extract from File').item.json['abdulfaheemasd@gmail.com'] }}",
+        "subject": "={{ $('AI Agent').item.json.output.subject }}",
+        "message": "={{ $('AI Agent').item.json.output.message }}",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {}
+            ]
+          },
+          "bccList": "abdulfaheemasd@gmail.com"
+        }
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        1152,
-        -336
+        1776,
+        0
       ],
-      "id": "fcbf5915-5c78-4858-9a89-c8a54a4cb3ea",
+      "id": "d1c9139e-f6c3-44a9-b1d1-193cbe0efaf5",
       "name": "Send a message",
       "webhookId": "e9e6e2c1-58b6-4c40-ac50-3be05c42e92a",
       "credentials": {
         "gmailOAuth2": {
-          "id": "Nc0ow5ePPhNJRE2E",
+          "id": "yWoaHhoDWg0rQrmQ",
           "name": "Gmail account"
         }
       }
@@ -109,10 +116,10 @@
       "type": "n8n-nodes-base.readWriteFile",
       "typeVersion": 1,
       "position": [
-        -208,
-        -336
+        240,
+        0
       ],
-      "id": "8ecd6a19-8134-4ab2-a8cf-c5c19ac1701a",
+      "id": "bbe00a72-496a-402d-a135-23fa0e0ee430",
       "name": "Read/Write Files from Disk1"
     },
     {
@@ -123,10 +130,10 @@
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1,
       "position": [
-        16,
-        -336
+        464,
+        0
       ],
-      "id": "4f69ea58-5781-4820-8c24-fc2ea94d74f7",
+      "id": "53650261-1839-4697-9132-cf106011e81f",
       "name": "Extract from File1"
     },
     {
@@ -137,24 +144,63 @@
       "type": "n8n-nodes-base.readWriteFile",
       "typeVersion": 1,
       "position": [
-        -448,
-        -336
+        1536,
+        0
       ],
-      "id": "f8665fc2-d60f-4dc3-801e-ac4eb8933b72",
+      "id": "6494742f-8720-4507-96da-0743b1de5b7a",
       "name": "Read/Write Files from Disk2"
     },
     {
       "parameters": {
-        "jsonSchemaExample": "{\n\t\"Subject\": \"Strategic Software Development Opportunity at OTAKOYI – Driving Innovation in Core Industries\",\n\t\"Message\": \"Hi sir/madam,\\n\\nI’ve been consistently impressed by OTAKOYI’s strategic focus on delivering end-to-end software solutions across Real Estate, Healthcare, and other critical sectors, particularly within the UAE. Given my ambition to contribute to forward-thinking companies with a strong industry impact, I was particularly excited to learn about your work.\\n\\nAs an entrepreneurial founder with a background in Full-Stack Development and a passion for Innovation, I’ve consistently tackled complex challenges and developed robust solutions. My experience includes a deep understanding of security best practices and a proactive approach to developing market-driven technology. I’ve successfully navigated both failures and achievements, honing my problem-solving skills and fostering a resilient mindset, ready to contribute to a dynamic team.\\n\\nI'm particularly interested in roles as a Software Developer, Technology Developer, or Business Development Executive (BDE) where I can leverage my skills to drive innovation and growth within your key industries. I’m confident I can bring a fresh perspective, backed by practical experience, to enhance your service offerings.\\n\\nI'd welcome the opportunity to discuss how my drive and skillset can further benefit OTAKOYI. You can view my portfolio and Github repositories at the links below.\\n\\nThanks for your time and consideration. Have an amazing day!\\n\\nFaheem\\nPH: 8870682288\\nEmail: abdulfaheemasd@gmail.com\\nLinkedIn: https://www.linkedin.com/in/abdul-faheem-a-04a072200/ (check this out you will like it)\\nPortfolio: https://areyouroot.github.io/\\nGithub: https://github.com/areyouroot/\"\n}"
+        "jsonSchemaExample": "{\n\"subject\": \"Opportunity in Aerosmart UAE's Commercial Drone Technology\",\n\"message\": \"Hi sir/madam,  I was impressed by Aerosmart UAE's focus on innovative drone solutions and comprehensive services in the UAE, which aligns perfectly with my career goals in leveraging technology to drive impact in the commercial drone space.  As a founder with an entrepreneurial background, I've built projects from scratch, learning to navigate challenges and seize opportunities through resilience and strategic thinking—skills that translate directly to dynamic environments like yours.  My expertise in Full-Stack Development and Security enables me to create robust, scalable software for drone operations, while my innovation-driven approach brings fresh market research and ideas to enhance your offerings and stay ahead of industry trends.  I'm interested in roles such as Software Developer, Technology Developer, or BDE, where I can apply my problem-solving skills from both failures and successes to contribute to Aerosmart UAE's growth, efficiency, and market expansion.  I'd love to discuss how I can add value to your team. Feel free to reach out to schedule a conversation.  Thanks for your time and consideration. Have an amazing day!  Faheem PH: 8870682288 Email: abdulfaheemasd@gmail.com LinkedIn: https://www.linkedin.com/in/abdul-faheem-a-04a072200/ (check this out you will like it) Portfolio: https://areyouroot.github.io/ Github: https://github.com/areyouroot/\"\n}"
       },
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3,
       "position": [
-        912,
-        -144
+        1520,
+        192
       ],
-      "id": "8bfa7dbd-e410-45ff-8c99-deb3cc95caff",
+      "id": "f3fb215b-5de6-4956-9c71-8d1fd80b7ae5",
       "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "model": "gemma3:12b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "typeVersion": 1,
+      "position": [
+        1584,
+        432
+      ],
+      "id": "e4476e47-69b5-4f75-be85-49338f9d656f",
+      "name": "Ollama Chat Model1",
+      "credentials": {
+        "ollamaApi": {
+          "id": "iCPmZWEh4H5NMHhU",
+          "name": "Ollama account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1136,
+        336
+      ],
+      "id": "07c632c2-f5be-413c-98a3-f2ce80620d6d",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "WHwdA5Rvx0ftHZve",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -163,7 +209,7 @@
       "main": [
         [
           {
-            "node": "Read/Write Files from Disk2",
+            "node": "Read/Write Files from Disk1",
             "type": "main",
             "index": 0
           }
@@ -183,13 +229,7 @@
     },
     "Ollama Chat Model": {
       "ai_languageModel": [
-        [
-          {
-            "node": "AI Agent",
-            "type": "ai_languageModel",
-            "index": 0
-          }
-        ]
+        []
       ]
     },
     "Extract from File": {
@@ -207,7 +247,7 @@
       "main": [
         [
           {
-            "node": "Send a message",
+            "node": "Read/Write Files from Disk2",
             "type": "main",
             "index": 0
           }
@@ -240,7 +280,7 @@
       "main": [
         [
           {
-            "node": "Read/Write Files from Disk1",
+            "node": "Send a message",
             "type": "main",
             "index": 0
           }
@@ -257,17 +297,33 @@
           }
         ]
       ]
+    },
+    "Ollama Chat Model1": {
+      "ai_languageModel": [
+        []
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "8c4bb532-7f2f-41be-a255-6aba3ad911c0",
+  "versionId": "d841844c-2a14-4945-83f1-0cf8646cd22a",
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "32186dfe806057fb279289d6cc23295d67047901d1d4d157c309e9f630ea64a8"
+    "instanceId": "8d849f26ba3e728c6b04db8259e6ac35bfa8b88e397f382feb0bcaaecffb5ddb"
   },
-  "id": "wBbC8cfikmKlb1Yv",
+  "id": "BK9byWsdvy8Xarh8",
   "tags": []
 }
