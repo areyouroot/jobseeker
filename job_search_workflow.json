@@ -1,0 +1,368 @@
+{
+    "name": "Job Search Automation (Portable)",
+    "nodes": [
+        {
+            "parameters": {},
+            "id": "trigger",
+            "name": "Start",
+            "type": "n8n-nodes-base.manualTrigger",
+            "typeVersion": 1,
+            "position": [
+                0,
+                0
+            ]
+        },
+        {
+            "parameters": {
+                "fileSelector": "resume.pdf"
+            },
+            "id": "read-resume",
+            "name": "Read Resume",
+            "type": "n8n-nodes-base.readWriteFile",
+            "typeVersion": 1,
+            "position": [
+                200,
+                0
+            ]
+        },
+        {
+            "parameters": {
+                "operation": "text"
+            },
+            "id": "extract-text",
+            "name": "Extract Text",
+            "type": "n8n-nodes-base.extractFromFile",
+            "typeVersion": 1,
+            "position": [
+                400,
+                0
+            ]
+        },
+        {
+            "parameters": {
+                "jsCode": "const resume = $input.item.json.data;\n// Prepare search queries per location\nconst locations = [\n  { name: 'Dubai', site: 'site:linkedin.com/jobs/dubai OR site:bayt.com' },\n  { name: 'Australia', site: 'site:seek.com.au OR site:linkedin.com/jobs/australia' },\n  { name: 'Chennai', site: 'site:naukri.com OR site:linkedin.com/jobs/chennai' }\n];\n\nreturn locations.map(loc => ({\n  json: {\n    location: loc.name,\n    resume: resume,\n    // Simplified query for DuckDuckGo HTML scraping\n    query: `${loc.site} \"software engineer\" \"latest\"`\n  }\n}));"
+            },
+            "id": "prepare-queries",
+            "name": "Prepare Queries",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 1,
+            "position": [
+                600,
+                0
+            ]
+        },
+        {
+            "parameters": {
+                "batchSize": 1,
+                "options": {}
+            },
+            "id": "split-loop",
+            "name": "Split Loop",
+            "type": "n8n-nodes-base.splitInBatches",
+            "typeVersion": 1,
+            "position": [
+                800,
+                0
+            ]
+        },
+        {
+            "parameters": {
+                "url": "https://html.duckduckgo.com/html/",
+                "sendQuery": true,
+                "queryParameters": {
+                    "parameters": [
+                        {
+                            "name": "q",
+                            "value": "={{ $json.query }}"
+                        }
+                    ]
+                },
+                "options": {
+                    "redirect": {
+                        "redirect": true
+                    }
+                }
+            },
+            "id": "search-ddg",
+            "name": "Search (DuckDuckGo)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 3,
+            "position": [
+                1000,
+                0
+            ]
+        },
+        {
+            "parameters": {
+                "dataPropertyName": "data",
+                "extractionValues": {
+                    "values": [
+                        {
+                            "key": "title",
+                            "cssSelector": ".result__a",
+                            "returnArray": true
+                        },
+                        {
+                            "key": "link",
+                            "cssSelector": ".result__a",
+                            "value": "attributes",
+                            "attribute": "href",
+                            "returnArray": true
+                        },
+                        {
+                            "key": "snippet",
+                            "cssSelector": ".result__snippet",
+                            "returnArray": true
+                        }
+                    ]
+                }
+            },
+            "id": "parse-html",
+            "name": "Parse HTML",
+            "type": "n8n-nodes-base.htmlExtract",
+            "typeVersion": 1,
+            "position": [
+                1200,
+                0
+            ]
+        },
+        {
+            "parameters": {
+                "jsCode": "// Flatten arrays from HTML Extract\nconst items = [];\nconst data = $input.item.json;\n\nif (data.title && data.link) {\n  for (let i = 0; i < data.title.length; i++) {\n    items.push({\n      json: {\n        title: data.title[i],\n        link: data.link[i],\n        snippet: data.snippet[i] || '',\n        location: $('Split Loop').item.json.location,\n        resume: $('Split Loop').item.json.resume\n      }\n    });\n  }\n}\n\nreturn items;"
+            },
+            "id": "flatten-results",
+            "name": "Flatten Results",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 1,
+            "position": [
+                1400,
+                0
+            ]
+        },
+        {
+            "parameters": {
+                "method": "POST",
+                "url": "http://localhost:11434/api/generate",
+                "sendBody": true,
+                "contentType": "json",
+                "bodyParameters": {
+                    "parameters": [
+                        {
+                            "name": "model",
+                            "value": "gemma3:12b"
+                        },
+                        {
+                            "name": "prompt",
+                            "value": "=Role: Recruiter. Task: Rate match 0-100.\nResume: {{ $json.resume.substring(0, 1000) }}...\nJob: {{ $json.title }} - {{ $json.snippet }}\nOutput: Just the number."
+                        },
+                        {
+                            "name": "stream",
+                            "value": false
+                        }
+                    ]
+                },
+                "options": {}
+            },
+            "id": "ollama-filter-req",
+            "name": "Filter (Ollama)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 3,
+            "position": [
+                1600,
+                0
+            ]
+        },
+        {
+            "parameters": {
+                "conditions": {
+                    "number": [
+                        {
+                            "value1": "={{ parseInt($json.response) }}",
+                            "operation": "largerEqual",
+                            "value2": 80
+                        }
+                    ]
+                }
+            },
+            "id": "filter-80",
+            "name": "Filter > 80%",
+            "type": "n8n-nodes-base.if",
+            "typeVersion": 1,
+            "position": [
+                1800,
+                0
+            ]
+        },
+        {
+            "parameters": {
+                "method": "POST",
+                "url": "http://localhost:11434/api/generate",
+                "sendBody": true,
+                "contentType": "json",
+                "bodyParameters": {
+                    "parameters": [
+                        {
+                            "name": "model",
+                            "value": "gemma3:12b"
+                        },
+                        {
+                            "name": "prompt",
+                            "value": "=Write a cover letter.\nJob: {{ $('Flatten Results').item.json.title }} at {{ $('Flatten Results').item.json.link }}\nResume: {{ $('Flatten Results').item.json.resume.substring(0, 2000) }}"
+                        },
+                        {
+                            "name": "stream",
+                            "value": false
+                        }
+                    ]
+                },
+                "options": {}
+            },
+            "id": "ollama-letter-req",
+            "name": "Write Letter (Ollama)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 3,
+            "position": [
+                2000,
+                0
+            ]
+        },
+        {
+            "parameters": {
+                "operation": "append",
+                "fileSelector": "Found_Jobs_Tested.json",
+                "options": {}
+            },
+            "id": "save-results",
+            "name": "Save Output",
+            "type": "n8n-nodes-base.readWriteFile",
+            "typeVersion": 1,
+            "position": [
+                2200,
+                0
+            ]
+        }
+    ],
+    "connections": {
+        "trigger": {
+            "main": [
+                [
+                    {
+                        "node": "read-resume",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "read-resume": {
+            "main": [
+                [
+                    {
+                        "node": "extract-text",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "extract-text": {
+            "main": [
+                [
+                    {
+                        "node": "prepare-queries",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "prepare-queries": {
+            "main": [
+                [
+                    {
+                        "node": "split-loop",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "split-loop": {
+            "main": [
+                [
+                    {
+                        "node": "search-ddg",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "search-ddg": {
+            "main": [
+                [
+                    {
+                        "node": "parse-html",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "parse-html": {
+            "main": [
+                [
+                    {
+                        "node": "flatten-results",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "flatten-results": {
+            "main": [
+                [
+                    {
+                        "node": "ollama-filter-req",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "ollama-filter-req": {
+            "main": [
+                [
+                    {
+                        "node": "filter-80",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "filter-80": {
+            "main": [
+                [
+                    {
+                        "node": "ollama-letter-req",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "ollama-letter-req": {
+            "main": [
+                [
+                    {
+                        "node": "save-results",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    }
+}

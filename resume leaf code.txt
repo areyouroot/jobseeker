@@ -1,0 +1,82 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% ModernCV themes
+\moderncvstyle{banking} 
+\moderncvcolor{blue}    
+
+% Character encoding
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.9]{geometry}
+
+% Personal Information
+\name{Abdul Faheem}{A}
+\email{abdulfaheemasd@gmail.com}
+\phone[mobile]{+91 8870682288}
+\social[linkedin]{abdul-faheem-a-04a072200}
+\homepage{areyouroot.github.io}
+
+\begin{document}
+\makecvtitle
+
+%-------------------------------------------------------------------------------
+\section{Professional Summary}
+\textbf{Application Security Engineer | DevSecOps Specialist}\vspace{0.2cm}
+
+Security Engineer with 3 years of experience architecting secure CI/CD pipelines (SSDLC) and automating vulnerability remediation. Proven track record of leveraging full-stack expertise (.NET, Angular) to build security tools and reduce Mean Time To Remediate (MTTR). Expert in Threat Modeling (STRIDE) and Zero Trust architecture implementation for cloud-native environments.
+
+%-------------------------------------------------------------------------------
+\section{Technical Skills}
+\cvitem{AppSec}{SAST, DAST, SCA, OWASP Top 10, Burp Suite, ZAP}
+\cvitem{Cloud Security}{Azure IAM, AWS GuardDuty, Sentinel, Kubernetes Security}
+\cvitem{DevSecOps}{CI/CD Integration, Docker, Jenkins/GitLab CI, Snyk, SonarQube}
+\cvitem{Compliance}{ISO 27001, SOC2, GDPR, NIST CSF}
+\cvitem{Languages}{C\# (.NET FrameWork, Core), TypeScript, Python, SQL}
+
+%-------------------------------------------------------------------------------
+\section{Professional Experience}
+
+\cventry{Mar 2023 -- Present}{\textbf{Application Security Engineer \& Full-Stack Developer}}{Hubstream India Pvt Ltd}{Chennai, India}{}{
+\textbf{Security Engineering \& DevSecOps Leadership:}
+\begin{itemize}
+    \item \textbf{SSDLC Implementation:} Architected the Security Software Development Lifecycle, automating \textbf{SAST, DAST, and SCA} into weekly tests and nightly build cycles, including Azure Advanced Scans.
+    \item \textbf{Threat Modeling:} Performed deep-dive threat analysis on existing and new systems using LLMs and frameworks like \textbf{STRIDE and PASTA} to ensure security by design.
+    \item \textbf{Compliance Automation:} Orchestrated automated compliance guardrails for GDPR/SOC2 within Azure IAM, reducing manual audit efforts by 20 hours/week and ensuring continuous compliance.
+    \item \textbf{Zero Trust Advocacy:} Led the \textit{"Trust Null"} Security Team with the mission of implementing a Zero Trust model and contributing to company-wide security policies.
+    \item \textbf{Incident Response:} Handled high-priority incidents including phishing threats, password leaks, and log forensic analysis; found and patched multiple critical security vulnerabilities.
+    \item \textbf{Security Awareness:} Organized and executed employee-wide security training programs and phishing simulation campaigns from entry-level to executive leadership.
+\end{itemize}
+\textbf{Product Engineering \& Modernization:}
+\begin{itemize}
+    \item \textbf{Secure Deployment \& Migration:} Engineered secure-by-default deployment mechanisms using \textbf{.NET 9}, eliminating configuration drift and reducing deployment-stage vulnerabilities by 30\%. Upgraded TypeScript codebases from \textbf{v4.7 to v5.9}.
+    \item \textbf{Innovation \& R\&D:} Contributed to R\&D projects including \textbf{Playwright/Docker PoCs} for parallel UI testing and optimized marketing tech through SEO/AEO/GEO strategies.
+\end{itemize}}
+
+%-------------------------------------------------------------------------------
+\section{Awards \& Recognition}
+\cvitem{Innovation Award}{\textbf{Internal Hackathon Winner:} Automated repeated workloads (CSV data creation) using Azure's GPT models before the mainstream AI boom.}
+\cvitem{Recognition Award}{Awarded for exceptional performance in identifying and patching critical production vulnerabilities and stabilizing product quality.}
+
+%-------------------------------------------------------------------------------
+\section{Projects}
+\cventry{}{Blockchain-Based Decentralized Storage System}{Academic Project}{}{}{
+\begin{itemize}
+    \item Developed a distributed storage system using blockchain, smart contracts, and IPFS to ensure data immutability and secure access control.
+\end{itemize}}
+
+\cventry{}{AI-Powered Facial Recognition Attendance System}{Academic Project}{}{}{
+\begin{itemize}
+    \item Built a real-time system using Python, OpenCV, and ML models, achieving 95\% recognition accuracy.
+\end{itemize}}
+
+%-------------------------------------------------------------------------------
+\section{Education}
+\cventry{}{B.Tech in Information Technology}{BS Abdur Rahman Crescent Institute of Science and Technology}{Chennai}{}{CGPA: 8.75/10}
+
+%-------------------------------------------------------------------------------
+\section{Additional Highlights}
+\begin{itemize}
+    \item \textbf{Invited Guest Lecturer:} Delivered expert sessions on AI and Cybersecurity at various academic institutions.
+    \item \textbf{Technical Evangelist:} Actively involved in security policy development and privacy-related challenges at the organizational level.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,31 @@
+# Core Dependencies for Job Seeker Application
+# ============================================
+
+# Geolocation and Distance Calculation
+geopy==2.4.1              # Geocoding and distance calculations
+geocoder==1.38.1          # IP-based geolocation
+
+# HTTP Requests and Web Scraping
+requests==2.31.0          # HTTP library for API calls
+beautifulsoup4==4.12.3    # HTML parsing
+lxml==5.1.0              # XML/HTML parser (faster than default)
+
+# Browser Automation (for LinkedIn scraping)
+selenium==4.16.0          # Web browser automation
+webdriver-manager==4.0.1  # Automatic webdriver management
+
+# Environment and Configuration
+python-dotenv==1.0.0      # Environment variable management
+
+# Data Processing
+pandas==2.1.4            # Data manipulation and analysis
+
+# Google Maps Integration (optional - requires API key)
+googlemaps==4.10.0       # Google Maps API client
+
+# Rate Limiting and Retry Logic
+ratelimit==2.2.1         # Rate limiting decorator
+tenacity==8.2.3          # Retry logic with exponential backoff
+
+# Logging and Debugging
+colorlog==6.8.0          # Colored logging output

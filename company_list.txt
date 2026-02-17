@@ -1,0 +1,482 @@
+================================================================================
+IT & CYBERSECURITY COMPANIES - AI-VERIFIED COMPREHENSIVE LIST
+================================================================================
+Generated: 2026-02-17 07:01:57
+Location: Kovur, Kundrathur, Pallavaram, Chengalpattu, Tamil Nadu, 602101, India
+Coordinates: 13.0195278°N, 80.1162778°E
+Search Radius: 25.0 km
+Total Companies Found: 25
+AI Model: Ollama gemma3:4b
+Verification: All companies verified for IT/Cybersecurity relevance
+Website Requirement: All companies have verified working websites
+================================================================================
+
+
+[1] ===========================================================================
+COMPANY: Pynesec Technologies Private Limited - Cyber security Services Company
+================================================================================
+Category: Cybersecurity
+Distance: 4.31 km from search center
+
+Product/Service:
+Provides cybersecurity services, including security consulting and penetration testing.
+
+Website: https://www.pynesec.com/
+
+Address: Samayapuram Nagar Main Road
+Phone: +919043111754
+
+Coordinates: 13.0380062, 80.1512771
+
+Website Title: Pynesec Technologies Leading Provider of Cyber Security Services
+
+
+[2] ===========================================================================
+COMPANY: Wcart
+================================================================================
+Category: SaaS
+Distance: 5.93 km from search center
+
+Product/Service:
+Wcart provides a SaaS platform for building and managing online stores.
+
+Website: https://wcart.io/
+
+Address: SIDCO Micro Industrial Estate, Thirumudivakkam
+Phone: +91 9150 570 507
+
+Coordinates: 12.9678348, 80.101683
+
+Website Title: Create Your Ecommerce website in Minutes | Online Store Builder
+
+
+[3] ===========================================================================
+COMPANY: WINNER TECH
+================================================================================
+Category: IT Services
+Distance: 7.90 km from search center
+
+Product/Service:
+WINNER TECH provides IT services, likely focusing on consulting and potentially managed services based on their website domain.
+
+Website: https://www.winnertech.in/
+
+Address: Veerappa Nagar
+
+Coordinates: 13.0424785, 80.1852625
+
+Website Title: Winnertech DB Meter - 9312220768
+
+
+[4] ===========================================================================
+COMPANY: Quadkast Technologies
+================================================================================
+Category: Software Development
+Distance: 9.13 km from search center
+
+Product/Service:
+Custom software development, mobile apps, and software consulting
+
+Website: http://quadkast.com/
+
+Address: Plot 12C, 1, 3rd Cross St, South Phase, Guindy Industrial Estate, Guindy, Chennai, Tamil Nadu 600032
+Email: info@quadkast.com
+
+Coordinates: 13.0160677, 80.2003626
+
+Website Title: Quadkast Technologies | Custom Software Development | Best Custom Web and App Development Company
+
+
+[5] ===========================================================================
+COMPANY: Beez Innovation Labs Pvt. Ltd.
+================================================================================
+Category: Software Development/Cloud Services/Data Analytics/AI/ML services
+Distance: 9.30 km from search center
+
+Product/Service:
+Beezlabs focuses on SAP BTP transformation with automation, AI, and cloud solutions, primarily centered around S/4 Clean Core implementation and optimization.
+
+Website: https://www.beezlabs.com/
+
+Address: SP-7A, South Phase, Guindy Industrial Estate, Guindy
+Phone: +91 44 4004 0468
+
+Coordinates: 13.0145816, 80.2018161
+
+Website Title: BeezLabs | SAP BTP Transformation Partner with S/4 Clean Core Strategy
+
+
+[6] ===========================================================================
+COMPANY: Poorvika Mobiles (Jafferkhanpet )
+================================================================================
+Category: Web Development
+Distance: 10.12 km from search center
+
+Product/Service:
+Poorvika is an online retailer specializing in electronics, likely offering web development and e-commerce solutions for other tech retailers.
+
+Website: https://www.poorvika.com/
+
+Address: 31/33, 2nd Street, Opp. to Kasi Theatre, Anjugam Nagar, West Jafferkhanpet, Chennai, Tamil Nadu 600083
+Phone: 044 4266 6666
+
+Coordinates: 13.0294824, 80.2090519
+
+Website Title: Latest Mobiles & Home Appliances at Best Price Near You!
+
+
+[7] ===========================================================================
+COMPANY: Poorvika Mobiles Tambaram - Mudichur
+================================================================================
+Category: IT Services/Web Development
+Distance: 11.09 km from search center
+
+Product/Service:
+Retail of electronics and likely related web/mobile development support for their online store.
+
+Website: https://www.poorvika.com/
+
+Address: Jothi Nagar, Mudichur Rd, West Tambaram,
+Phone: 04443666666
+
+Coordinates: 12.9217313, 80.0936758
+
+Website Title: Latest Mobiles & Home Appliances at Best Price Near You!
+
+
+[8] ===========================================================================
+COMPANY: TecEx India Private Limited
+================================================================================
+Category: SaaS
+Distance: 11.44 km from search center
+
+Product/Service:
+TecEx provides Importer of Record solutions, primarily serving the tech supply chain with trade compliance and EOR services, which can be categorized as a SaaS offering for streamlining global trade operations.
+
+Website: https://tecex.com/
+
+Address: Little Mount, Kotturpuram
+Phone: (02) 9056 4057
+
+Coordinates: 13.0077889, 80.2210455
+
+Website Title: Customs Compliance Experts | Importer of Record | TecEx
+
+
+[9] ===========================================================================
+COMPANY: Sutherland Global Services
+================================================================================
+Category: IT Services/SaaS/Cloud Services/Data Analytics/DevOps
+Distance: 13.41 km from search center
+
+Product/Service:
+Sutherland provides digital transformation services leveraging AI, analytics, cloud, and automation for global enterprises, encompassing IT consulting, managed services, and cloud-based solutions.
+
+Website: https://www.sutherlandglobal.com/
+
+Address: Grand Southern Trunk Road
+Phone: +91-98406 75144
+
+Coordinates: 12.9004955, 80.0928012
+
+Website Title: Digital Transformation & Business Process Services - Sutherland
+
+
+[10] ===========================================================================
+COMPANY: Free Software Foundation Tamil Nadu (FSFTN)
+================================================================================
+Category: Software Development
+Distance: 14.36 km from search center
+
+Product/Service:
+Development and promotion of Free Software and Open Source principles within educational institutions.
+
+Website: https://fsftn.org
+
+Address: N/A
+Email: ask@fsftn.org
+
+Coordinates: 13.046479, 80.2457607
+
+Website Title: FSFTN
+
+
+[11] ===========================================================================
+COMPANY: Zupersoft Solution PVT Ltd
+================================================================================
+Category: SaaS
+Distance: 14.39 km from search center
+
+Product/Service:
+Field service management software
+
+Website: https://zuper.co/
+
+Address: Prakasam Street, Gangai Karai Puram, T. Nagar
+
+Coordinates: 13.0494308, 80.2453743
+
+Website Title: All in One Field Service Management Software & App - Zuper
+
+
+[12] ===========================================================================
+COMPANY: Sterling Software Pvt Ltd
+================================================================================
+Category: Software Development
+Distance: 14.61 km from search center
+
+Product/Service:
+Developing software solutions for the Indian Capital Market sector.
+
+Website: https://sterlingsoftware.global
+
+Address: CSIR road
+
+Coordinates: 12.9854153, 80.2463893
+
+Website Title: Sterling | Financial Technology. Digital. Consulting
+
+
+[13] ===========================================================================
+COMPANY: Service Integrator
+================================================================================
+Category: IT Services
+Distance: 14.65 km from search center
+
+Product/Service:
+Provides IT integration services – likely consulting, managed services, and potentially infrastructure support for Gemini Communication Ltd.
+
+Website: http://gcl.in/
+
+Address: Alwarpet
+
+Coordinates: 13.0336562, 80.2505994
+
+Website Title: Gemini Communication Ltd. | Innovation & Leadership
+
+
+[14] ===========================================================================
+COMPANY: Freshworks
+================================================================================
+Category: SaaS
+Distance: 14.91 km from search center
+
+Product/Service:
+Freshworks provides customer service and IT solutions as SaaS products, primarily focused on CRM and customer engagement platforms.
+
+Website: https://freshworks.com
+
+Address: Dr MGR Main Road, Kodandarama Nagar
+Phone: +91 44 6667 8040
+
+Coordinates: 12.9695392, 80.2439381
+
+Website Title: Freshworks: Uncomplicated Software | IT Service, Customer Service
+
+
+[15] ===========================================================================
+COMPANY: Trimble Information Technologies India Pvt Ltd
+================================================================================
+Category: SaaS/Software Development
+Distance: 15.25 km from search center
+
+Product/Service:
+Trimble provides industrial technologies including software and SaaS solutions for transforming industries like construction, agriculture, and transportation.
+
+Website: https://www.trimble.com/en/
+
+Address: N/A
+
+Coordinates: 12.9633028, 80.2445952
+
+Website Title: Trimble | Solutions for Construction, Geospatial, Transportation & More
+
+
+[16] ===========================================================================
+COMPANY: Blaze Dream Technologies Pvt Ltd
+================================================================================
+Category: Web Development
+Distance: 15.29 km from search center
+
+Product/Service:
+Provides web development services, including app, portal, e-commerce, and Magento development.
+
+Website: https://www.blazedream.com/
+
+Address: Pycrofts Garden Road
+Phone: +914442047468
+Email: reach@blazedream.com
+
+Coordinates: 13.0637732, 80.2497868
+
+Website Title: BlazeDream, a top web development company in India, trusted by 1000+ brands.
+
+
+[17] ===========================================================================
+COMPANY: Truckrr Information services
+================================================================================
+Category: SaaS
+Distance: 15.37 km from search center
+
+Product/Service:
+Provides a CRM solution for fleet and logistics operations.
+
+Website: https://www.truckrr.com/
+
+Address: New MGR Road, Veeramamunivar, 1st street
+Phone: 04447768360
+
+Coordinates: 12.9647683, 80.2465261
+
+Website Title: Truckrr - #1 CRM Exclusive for Truck Owners
+
+
+[18] ===========================================================================
+COMPANY: Ducen IT
+================================================================================
+Category: Cloud Services
+Distance: 15.40 km from search center
+
+Product/Service:
+Hosting services for websites and applications (Nexcens hosting).
+
+Website: https://www.ducenit.com/
+
+Address: Old Mahabalipuram Road
+Phone: +91 44 4225 6666
+Email: sales@ducenit.com
+
+Coordinates: 12.9679914, 80.2481244
+
+Website Title: Nexcess
+
+
+[19] ===========================================================================
+COMPANY: Circuits 99
+================================================================================
+Category: Software Development
+Distance: 15.62 km from search center
+
+Product/Service:
+Circuits 99 specializes in providing custom-designed, high-performance computing solutions – likely involving software development and potentially hardware integration.
+
+Website: https://www.circuits99.co.in/
+
+Address: Besant Avenue Road
+Phone: 09626196261
+
+Coordinates: 13.0074884, 80.2597144
+
+Website Title: Circuit 99
+
+
+[20] ===========================================================================
+COMPANY: Eloka Enterprises Private Limited
+================================================================================
+Category: Software Development
+Distance: 15.72 km from search center
+
+Product/Service:
+Eloka Enterprises develops custom software solutions and applications.
+
+Website: https://eloka.net/
+
+Address: Padmanabha Nagar 5th Street
+
+Coordinates: 13.0057342, 80.2605395
+
+Website Title: Eloka - OTZ
+
+
+[21] ===========================================================================
+COMPANY: Novac Technology Solutions
+================================================================================
+Category: Cloud Services
+Distance: 16.50 km from search center
+
+Product/Service:
+Provides cloud solutions services for financial, insurance, retail, and learning industries.
+
+Website: https://www.novactech.in/
+
+Address: Statesman One, Ramakrishna Mutt Rd
+
+Coordinates: 13.036261, 80.2674193
+
+Website Title: NovacTech: Digital Transformation Company, Cloud Solutions Company
+
+
+[22] ===========================================================================
+COMPANY: Versutus Management Service Private ltd
+================================================================================
+Category: IT Services/SaaS
+Distance: 16.66 km from search center
+
+Product/Service:
+Compliance management services, likely involving software and potentially SaaS solutions to assist businesses with regulatory requirements.
+
+Website: https://www.versutus.com/
+
+Address: Kutchery Road
+
+Coordinates: 13.0356156, 80.2689542
+
+Website Title: Compliance Management & Legal services| Compliance services in India
+
+
+[23] ===========================================================================
+COMPANY: BETA CAE Systems India Pvt. Ltd. (Chennai Office)
+================================================================================
+Category: Software Development
+Distance: 17.37 km from search center
+
+Product/Service:
+Provides pioneering simulation software systems and processes, likely involving custom software development for engineering and industrial applications.
+
+Website: https://www.beta-cae.com/
+
+Address: Rattha Tek Meadows Tower B, 3rd Floor, Rajiv Gandhi Salai (OMR), Sholinganallur
+Phone: +914430095400
+
+Coordinates: 12.9057608, 80.2266263
+
+Website Title: BETA CAE Systems - Groundbreaking Simulation Solutions
+
+
+[24] ===========================================================================
+COMPANY: Qmax Test Equipments Private Limited
+================================================================================
+Category: Software Development
+Distance: 17.94 km from search center
+
+Product/Service:
+Provides Automated Test Equipment (ATE) and PCB testing solutions.
+
+Website: https://www.qmaxtest.com/
+
+Address: Elcot Avenue
+Phone: +91 44 24509627
+
+Coordinates: 12.896099, 80.2235545
+
+Website Title: Qmax
+
+
+[25] ===========================================================================
+COMPANY: Valeo India Private Limited
+================================================================================
+Category: Software Development
+Distance: 23.00 km from search center
+
+Product/Service:
+Valeo is a technology company focused on innovation and development for the automotive industry, including software development related to smart mobility.
+
+Website: https://www.valeo.com
+
+Address: Rajiv Gandhi Salai
+Phone: +91-44-7102 7300
+
+Coordinates: 12.8425184, 80.2274769
+
+Website Title: Driving change Together
+
