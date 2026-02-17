@@ -190,14 +190,12 @@ class CompanySearchService:
         radius_m = int(radius_km * 1000)
         
         # Build Overpass QL query
-        # This searches for nodes and ways tagged as offices, shops, or companies
+        # This searches for nodes and ways tagged as offices
         query = f"""
-        [out:json][timeout:25];
+        [out:json][timeout:60];
         (
           node["office"](around:{radius_m},{origin.latitude},{origin.longitude});
-          node["shop"](around:{radius_m},{origin.latitude},{origin.longitude});
           way["office"](around:{radius_m},{origin.latitude},{origin.longitude});
-          way["shop"](around:{radius_m},{origin.latitude},{origin.longitude});
         );
         out body;
         >;
