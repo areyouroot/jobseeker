@@ -78,7 +78,7 @@ def main():
     logger.info(f"Filtered down to {len(filtered_companies)} relevant companies.")
 
     # 4. Simulate Application & Log
-    output_file = "applied companies"
+    output_file = "company.txt"
     user_email = "abdulfaheemasd@gmail.com"
 
     with open(output_file, "w", encoding="utf-8") as f:

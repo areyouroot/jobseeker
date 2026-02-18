@@ -1,0 +1,534 @@
+================================================================================
+APPLIED COMPANIES REPORT
+Date: 2026-02-18 01:19:05
+Location: Mangadu, Chennai (Fallback)
+Radius: 25.0 km
+Total Applied: 57
+================================================================================
+
+[1] COMPANY: Arasu Infotech
+    Distance: 3.81 km
+    Address: 1st and 2nd floor, Om sakthi nagar, Kasi Towers, Mettukuppam, Vanagaram
+    Website: arasuinfotechservices.com
+    Phone: 9943400155
+    ACTIONS TAKEN:
+    - Visited website arasuinfotechservices.com and checked careers page
+    - Searched LinkedIn for 'Arasu Infotech' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[2] COMPANY: Pynesec Technologies Private Limited - Cyber security Services Company
+    Distance: 3.96 km
+    Address: Samayapuram Nagar Main Road
+    Website: https://www.pynesec.com/
+    Phone: +919043111754
+    ACTIONS TAKEN:
+    - Visited website https://www.pynesec.com/ and checked careers page
+    - Searched LinkedIn for 'Pynesec Technologies Private Limited - Cyber security Services Company' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[3] COMPANY: GlobalEnglish India Pvt Ltd.
+    Distance: 6.75 km
+    Address: Mount Poonamallee Highway
+    Website: https://globalenglish.com/
+    Phone: +91 44 4564 1111
+    ACTIONS TAKEN:
+    - Visited website https://globalenglish.com/ and checked careers page
+    - Searched LinkedIn for 'GlobalEnglish India Pvt Ltd.' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[4] COMPANY: Trail cloud innovation services Pvt.Ltd
+    Distance: 8.30 km
+    Address: Thiruvalluvar salai
+    Website: https://www.trail.do/
+    ACTIONS TAKEN:
+    - Visited website https://www.trail.do/ and checked careers page
+    - Searched LinkedIn for 'Trail cloud innovation services Pvt.Ltd' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[5] COMPANY: Tata Communications Ltd.
+    Distance: 8.31 km
+    Address: Nandambakkam Bridge
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Tata Communications Ltd.' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[6] COMPANY: Spritle Software
+    Distance: 9.04 km
+    Address: Chakrapani St
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Spritle Software' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[7] COMPANY: Quadkast Technologies
+    Distance: 9.69 km
+    Address: Plot 12C, 1, 3rd Cross St, South Phase, Guindy Industrial Estate, Guindy, Chennai, Tamil Nadu 600032
+    Email: info@quadkast.com
+    Website: http://quadkast.com/
+    ACTIONS TAKEN:
+    - Sent email to info@quadkast.com with resume attached (CC: abdulfaheemasd@gmail.com)
+    - Visited website http://quadkast.com/ and checked careers page
+    - Searched LinkedIn for 'Quadkast Technologies' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[8] COMPANY: Beez Innovation Labs Pvt. Ltd.
+    Distance: 9.89 km
+    Address: SP-7A, South Phase, Guindy Industrial Estate, Guindy
+    Website: https://www.beezlabs.com/
+    Phone: +91 44 4004 0468
+    ACTIONS TAKEN:
+    - Visited website https://www.beezlabs.com/ and checked careers page
+    - Searched LinkedIn for 'Beez Innovation Labs Pvt. Ltd.' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[9] COMPANY: Saama Technologies pvt. Ltd
+    Distance: 11.00 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Saama Technologies pvt. Ltd' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[10] COMPANY: Schatz Enterprises Private Limited
+    Distance: 11.30 km
+    Address: 5th Avenue, Shanthi Colony,
+    Website: https://schatzmarkets.com/
+    ACTIONS TAKEN:
+    - Visited website https://schatzmarkets.com/ and checked careers page
+    - Searched LinkedIn for 'Schatz Enterprises Private Limited' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[11] COMPANY: Group10 Technologies Pvt Ltd
+    Distance: 11.44 km
+    Address: Vigneshwara Street
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Group10 Technologies Pvt Ltd' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[12] COMPANY: Layotos Technologies Pvt LTD
+    Distance: 12.23 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Layotos Technologies Pvt LTD' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[13] COMPANY: SMS LABS SERVICES Pvt Ltd
+    Distance: 12.31 km
+    Address: Poonamallee Thiruvallur Road
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'SMS LABS SERVICES Pvt Ltd' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[14] COMPANY: Rmade Technologies
+    Distance: 12.88 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Rmade Technologies' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[15] COMPANY: LMS India Engg. Solutions Pvt. Ltd
+    Distance: 12.98 km
+    Address: Kannadasan Road
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'LMS India Engg. Solutions Pvt. Ltd' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[16] COMPANY: RTL-Academy
+    Distance: 13.12 km
+    Address: 1st Street, Sigamani Nagar
+    Website: www.rtlacademy.org
+    Phone: 044 35912841
+    ACTIONS TAKEN:
+    - Visited website www.rtlacademy.org and checked careers page
+    - Searched LinkedIn for 'RTL-Academy' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[17] COMPANY: Payilagam Software Training Institute
+    Distance: 13.34 km
+    Address: Vijayanagar 1st Main Road, Velachery
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Payilagam Software Training Institute' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[18] COMPANY: NASTAF Technologies PVT LTD
+    Distance: 13.55 km
+    Address: II Floor, Swathi Complex, No. 34, Flat No 2, Nandanam, Chennai, Tamil Nadu
+    Website: https://nastaf.com/
+    ACTIONS TAKEN:
+    - Visited website https://nastaf.com/ and checked careers page
+    - Searched LinkedIn for 'NASTAF Technologies PVT LTD' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[19] COMPANY: Center for Innovation
+    Distance: 13.74 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Center for Innovation' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[20] COMPANY: Adyog Software Solutions Pvt Ltd.
+    Distance: 13.77 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Adyog Software Solutions Pvt Ltd.' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[21] COMPANY: Utimax Industrial Solutions Pvt Ltd
+    Distance: 13.90 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Utimax Industrial Solutions Pvt Ltd' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[22] COMPANY: Free Software Foundation Tamil Nadu (FSFTN)
+    Distance: 14.19 km
+    Address: N/A
+    Email: ask@fsftn.org
+    Website: https://fsftn.org
+    ACTIONS TAKEN:
+    - Sent email to ask@fsftn.org with resume attached (CC: abdulfaheemasd@gmail.com)
+    - Visited website https://fsftn.org and checked careers page
+    - Searched LinkedIn for 'Free Software Foundation Tamil Nadu (FSFTN)' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[23] COMPANY: Global Logistics
+    Distance: 14.27 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Global Logistics' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[24] COMPANY: Edufic Digital
+    Distance: 14.29 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Edufic Digital' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[25] COMPANY: Kin Technologies Pvt Ltd
+    Distance: 14.35 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Kin Technologies Pvt Ltd' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[26] COMPANY: Sundaram Finance Holdings
+    Distance: 14.35 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Sundaram Finance Holdings' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[27] COMPANY: Shafika
+    Distance: 14.37 km
+    Address: kodambakkam High Road
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Shafika' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[28] COMPANY: Keith Electronics Pvt Ltd
+    Distance: 14.42 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Keith Electronics Pvt Ltd' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[29] COMPANY: Dexterity Design Services
+    Distance: 14.55 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Dexterity Design Services' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[30] COMPANY: Blaze Dream Technologies Pvt Ltd
+    Distance: 14.82 km
+    Address: Pycrofts Garden Road
+    Email: reach@blazedream.com
+    Website: https://www.blazedream.com/
+    Phone: +914442047468
+    ACTIONS TAKEN:
+    - Sent email to reach@blazedream.com with resume attached (CC: abdulfaheemasd@gmail.com)
+    - Visited website https://www.blazedream.com/ and checked careers page
+    - Searched LinkedIn for 'Blaze Dream Technologies Pvt Ltd' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[31] COMPANY: SARF Communications
+    Distance: 14.85 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'SARF Communications' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[32] COMPANY: Centre of Excellence in Wireless Technology
+    Distance: 14.93 km
+    Address: Kanagam road, Taramani
+    Email: admin@cewit.org.in
+    Phone: +91-44-66469201
+    ACTIONS TAKEN:
+    - Sent email to admin@cewit.org.in with resume attached (CC: abdulfaheemasd@gmail.com)
+    - Searched LinkedIn for 'Centre of Excellence in Wireless Technology' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[33] COMPANY: ObjectFrontier Software
+    Distance: 15.50 km
+    Address: Taramani Road
+    Website: https://www.objectfrontier.com/
+    Phone: (+91) 44-3061-2100
+    ACTIONS TAKEN:
+    - Visited website https://www.objectfrontier.com/ and checked careers page
+    - Searched LinkedIn for 'ObjectFrontier Software' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[34] COMPANY: Maaya Systems
+    Distance: 15.55 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Maaya Systems' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[35] COMPANY: Sterling Software Pvt Ltd
+    Distance: 15.57 km
+    Address: CSIR road
+    Website: https://sterlingsoftware.global
+    ACTIONS TAKEN:
+    - Visited website https://sterlingsoftware.global and checked careers page
+    - Searched LinkedIn for 'Sterling Software Pvt Ltd' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[36] COMPANY: TVF - Contagious online media network private limited
+    Distance: 15.82 km
+    Address: Musiri Subramanium street, oliver road
+    Website: www.tvfplay.com
+    Phone: 044-49521737
+    ACTIONS TAKEN:
+    - Visited website www.tvfplay.com and checked careers page
+    - Searched LinkedIn for 'TVF - Contagious online media network private limited' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[37] COMPANY: Sutherland Global Services
+    Distance: 15.84 km
+    Address: Grand Southern Trunk Road
+    Website: https://www.sutherlandglobal.com/
+    Phone: +91-98406 75144
+    ACTIONS TAKEN:
+    - Visited website https://www.sutherlandglobal.com/ and checked careers page
+    - Searched LinkedIn for 'Sutherland Global Services' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[38] COMPANY: VFS Global Services Pvt. Ltd.
+    Distance: 15.86 km
+    Address: Ethiraj Salai
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'VFS Global Services Pvt. Ltd.' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[39] COMPANY: Nesh Technologies
+    Distance: 16.21 km
+    Address: Dr.VSI Estate, Thiruvanmiyur
+    Website: https://nesh.live
+    Phone: 9790706090
+    ACTIONS TAKEN:
+    - Visited website https://nesh.live and checked careers page
+    - Searched LinkedIn for 'Nesh Technologies' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[40] COMPANY: Hexolabs Interactive Tech Pvt Ltd
+    Distance: 16.25 km
+    Address: Dr.VSI Estate, Thiruvanmiyur
+    Phone: 044 42169699
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Hexolabs Interactive Tech Pvt Ltd' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[41] COMPANY: Zilogic Systems Private Limited (Block III)
+    Distance: 16.27 km
+    Address: 2nd Floor, Ragula Tech Park, Dr. VSI Estate
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Zilogic Systems Private Limited (Block III)' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[42] COMPANY: ZeQube Technologies
+    Distance: 16.28 km
+    Address: 1st Main Road
+    Email: support@zeqube.com
+    Website: http://zeqube.com
+    Phone: 09600112861
+    ACTIONS TAKEN:
+    - Sent email to support@zeqube.com with resume attached (CC: abdulfaheemasd@gmail.com)
+    - Visited website http://zeqube.com and checked careers page
+    - Searched LinkedIn for 'ZeQube Technologies' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[43] COMPANY: Comcast India Engineering Center
+    Distance: 16.43 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Comcast India Engineering Center' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[44] COMPANY: Chennai Two Software Park
+    Distance: 16.43 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Chennai Two Software Park' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[45] COMPANY: Trimble Information Technologies India Pvt Ltd
+    Distance: 16.54 km
+    Address: N/A
+    Website: https://www.trimble.com/en/
+    ACTIONS TAKEN:
+    - Visited website https://www.trimble.com/en/ and checked careers page
+    - Searched LinkedIn for 'Trimble Information Technologies India Pvt Ltd' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[46] COMPANY: Novac Technology Solutions
+    Distance: 16.54 km
+    Address: Statesman One, Ramakrishna Mutt Rd
+    Website: https://www.novactech.in/
+    ACTIONS TAKEN:
+    - Visited website https://www.novactech.in/ and checked careers page
+    - Searched LinkedIn for 'Novac Technology Solutions' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[47] COMPANY: TMTE Metal Tech Private Limited (DONRACKS)
+    Distance: 16.58 km
+    Address: N/A
+    Email: sales@donracks.com
+    Website: https://donracks.com
+    ACTIONS TAKEN:
+    - Sent email to sales@donracks.com with resume attached (CC: abdulfaheemasd@gmail.com)
+    - Visited website https://donracks.com and checked careers page
+    - Searched LinkedIn for 'TMTE Metal Tech Private Limited (DONRACKS)' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[48] COMPANY: Truckrr Information services
+    Distance: 16.63 km
+    Address: New MGR Road, Veeramamunivar, 1st street
+    Website: https://www.truckrr.com/
+    Phone: 04447768360
+    ACTIONS TAKEN:
+    - Visited website https://www.truckrr.com/ and checked careers page
+    - Searched LinkedIn for 'Truckrr Information services' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[49] COMPANY: Bahwan Cybertek Pvt. Ltd.
+    Distance: 17.07 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Bahwan Cybertek Pvt. Ltd.' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[50] COMPANY: WizDemy Software Private Limited
+    Distance: 17.33 km
+    Address: 48th Cross St Valmiki Nagar, Thiruvalluvar Nagar, Thiruvanmiyur
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'WizDemy Software Private Limited' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[51] COMPANY: Roanuz Softwares
+    Distance: 17.62 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Roanuz Softwares' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[52] COMPANY: M SYSTEM & SERVICES
+    Distance: 18.50 km
+    Address: 2nd Street, Part-2 Venkateswara Nagar, Kodungaiyur
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'M SYSTEM & SERVICES' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[53] COMPANY: HCL Technologies Ltd.
+    Distance: 18.75 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'HCL Technologies Ltd.' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[54] COMPANY: Prestige Cyber Towers
+    Distance: 18.85 km
+    Address: Rajiv Gandhi Salai
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Prestige Cyber Towers' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[55] COMPANY: BETA CAE Systems India Pvt. Ltd. (Chennai Office)
+    Distance: 19.34 km
+    Address: Rattha Tek Meadows Tower B, 3rd Floor, Rajiv Gandhi Salai (OMR), Sholinganallur
+    Website: https://www.beta-cae.com/
+    Phone: +914430095400
+    ACTIONS TAKEN:
+    - Visited website https://www.beta-cae.com/ and checked careers page
+    - Searched LinkedIn for 'BETA CAE Systems India Pvt. Ltd. (Chennai Office)' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[56] COMPANY: Tamil Nadu Engineering Works
+    Distance: 19.46 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'Tamil Nadu Engineering Works' and applied to relevant roles
+
+--------------------------------------------------------------------------------
+
+[57] COMPANY: ETA Techno Park
+    Distance: 24.43 km
+    Address: N/A
+    ACTIONS TAKEN:
+    - Searched LinkedIn for 'ETA Techno Park' and applied to relevant roles
+
+--------------------------------------------------------------------------------
