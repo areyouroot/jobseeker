@@ -54,12 +54,27 @@ def main():
 
         # Initialize Email Service
         sender_email, sender_password = load_email_credentials()
+
         # Check if credentials are placeholders
-        if sender_email == "your_email@gmail.com":
-             logger.warning("Using placeholder email credentials. Real emails will NOT be sent.")
-             email_service = EmailService(None, None)
+        if not sender_email or sender_email == "your_email@gmail.com":
+             logger.error("❌ CRITICAL: No valid email credentials found in 'email_credentials.txt'.")
+             logger.error("Please update 'email_credentials.txt' with your Gmail and App Password.")
+             logger.error("Job Application process aborted to prevent simulation (as requested).")
+             sys.exit(1)
         else:
              email_service = EmailService(sender_email, sender_password)
+             # Validate connection before starting
+             try:
+                 import smtplib
+                 server = smtplib.SMTP('smtp.gmail.com', 587)
+                 server.starttls()
+                 server.login(sender_email, sender_password)
+                 server.quit()
+                 logger.info("✅ Email credentials validated successfully.")
+             except Exception as auth_err:
+                 logger.error(f"❌ Failed to authenticate with Gmail: {auth_err}")
+                 logger.error("Please check your App Password.")
+                 sys.exit(1)
 
     except Exception as e:
         logger.error(f"Failed to initialize services: {e}")
