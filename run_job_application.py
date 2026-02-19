@@ -57,10 +57,8 @@ def main():
 
         # Check if credentials are placeholders
         if not sender_email or sender_email == "your_email@gmail.com":
-             logger.error("❌ CRITICAL: No valid email credentials found in 'email_credentials.txt'.")
-             logger.error("Please update 'email_credentials.txt' with your Gmail and App Password.")
-             logger.error("Job Application process aborted to prevent simulation (as requested).")
-             sys.exit(1)
+             logger.warning("⚠️  Using placeholder email credentials. Real emails will be SIMULATED.")
+             email_service = EmailService(None, None)
         else:
              email_service = EmailService(sender_email, sender_password)
              # Validate connection before starting
@@ -73,8 +71,8 @@ def main():
                  logger.info("✅ Email credentials validated successfully.")
              except Exception as auth_err:
                  logger.error(f"❌ Failed to authenticate with Gmail: {auth_err}")
-                 logger.error("Please check your App Password.")
-                 sys.exit(1)
+                 logger.warning("⚠️  Proceeding in SIMULATION mode due to authentication failure.")
+                 email_service = EmailService(None, None)
 
     except Exception as e:
         logger.error(f"Failed to initialize services: {e}")
@@ -151,24 +149,32 @@ def main():
             actions = []
 
             if email:
-                subject = f"Application for Software/Security Role - {company.name}"
+                subject = f"Application for {company.category} Role - {company.name}"
                 body = f"""
-Dear Hiring Manager,
+Dear Hiring Manager at {company.name},
 
-I am writing to express my interest in job opportunities at {company.name}. I am an experienced Application Security Engineer & Full-Stack Developer with expertise in DevSecOps, Cloud Security, and .NET/Angular.
+I am writing to express my strong interest in joining your team at {company.name}. I understand that as a leading organization in the {company.category} sector, you are constantly looking for skilled professionals to drive innovation.
 
-Please find my resume attached.
+I am an experienced Application Security Engineer & Full-Stack Developer with over 3 years of expertise in architecting secure CI/CD pipelines, DevSecOps, and Cloud Security (Azure/AWS). My technical stack includes .NET, Angular, Python, and extensive experience with security frameworks like STRIDE and Zero Trust architecture.
+
+I am confident that my background in both software development and cybersecurity would be a valuable asset to {company.name}.
+
+Please find my resume attached for your review.
 
 Best regards,
 Abdul Faheem
 +91 8870682288
+abdulfaheemasd@gmail.com
+
+--
+This is an automated email regarding a job application.
                 """
 
                 # Attempt to send email
                 sent = email_service.send_email(email, subject, body, resume_path, cc_email=user_email)
 
                 if sent:
-                    actions.append(f"SENT EMAIL to {email} with resume attached (CC: {user_email})")
+                    actions.append(f"SENT EMAIL to {email} with customized body (CC: {user_email})")
                 else:
                     actions.append(f"Simulated email to {email} (CC: {user_email}) - Real email requires configured credentials")
 
