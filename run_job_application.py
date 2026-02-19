@@ -1,14 +1,33 @@
 
 import logging
 import sys
+import os
 from datetime import datetime
 from typing import List
 from location_service import LocationService, Location
 from company_search import CompanySearchService, Company
+from email_service import EmailService
+from dotenv import load_dotenv
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logger = logging.getLogger('JobApplicationScript')
+
+def load_email_credentials():
+    """Load email credentials from file or environment variables."""
+    sender_email = None
+    sender_password = None
+
+    # Try loading from file first
+    if os.path.exists("email_credentials.txt"):
+        with open("email_credentials.txt", "r") as f:
+            for line in f:
+                if line.startswith("SENDER_EMAIL="):
+                    sender_email = line.strip().split("=", 1)[1]
+                elif line.startswith("SENDER_PASSWORD="):
+                    sender_password = line.strip().split("=", 1)[1]
+
+    return sender_email, sender_password
 
 def filter_companies_by_keywords(companies: List[Company], keywords: List[str]) -> List[Company]:
     """
@@ -32,6 +51,16 @@ def main():
     try:
         location_service = LocationService()
         company_service = CompanySearchService()
+
+        # Initialize Email Service
+        sender_email, sender_password = load_email_credentials()
+        # Check if credentials are placeholders
+        if sender_email == "your_email@gmail.com":
+             logger.warning("Using placeholder email credentials. Real emails will NOT be sent.")
+             email_service = EmailService(None, None)
+        else:
+             email_service = EmailService(sender_email, sender_password)
+
     except Exception as e:
         logger.error(f"Failed to initialize services: {e}")
         return
@@ -80,6 +109,7 @@ def main():
     # 4. Simulate Application & Log
     output_file = "company.txt"
     user_email = "abdulfaheemasd@gmail.com"
+    resume_path = "resume.txt"
 
     with open(output_file, "w", encoding="utf-8") as f:
         f.write("================================================================================\n")
@@ -97,9 +127,6 @@ def main():
             f.write(f"    Distance: {company.distance_km:.2f} km\n")
             f.write(f"    Address: {company.address}\n")
 
-            # Determine application method
-            contact_info = []
-
             # Check for email in additional_info
             email = company.additional_info.get('email')
             website = company.website
@@ -109,14 +136,34 @@ def main():
             actions = []
 
             if email:
-                actions.append(f"Sent email to {email} with resume attached (CC: {user_email})")
+                subject = f"Application for Software/Security Role - {company.name}"
+                body = f"""
+Dear Hiring Manager,
+
+I am writing to express my interest in job opportunities at {company.name}. I am an experienced Application Security Engineer & Full-Stack Developer with expertise in DevSecOps, Cloud Security, and .NET/Angular.
+
+Please find my resume attached.
+
+Best regards,
+Abdul Faheem
++91 8870682288
+                """
+
+                # Attempt to send email
+                sent = email_service.send_email(email, subject, body, resume_path, cc_email=user_email)
+
+                if sent:
+                    actions.append(f"SENT EMAIL to {email} with resume attached (CC: {user_email})")
+                else:
+                    actions.append(f"Simulated email to {email} (CC: {user_email}) - Real email requires configured credentials")
+
                 f.write(f"    Email: {email}\n")
 
             if website:
                 actions.append(f"Visited website {website} and checked careers page")
                 f.write(f"    Website: {website}\n")
 
-            # Simulate LinkedIn search (we don't have the URL but we simulate the action)
+            # Simulate LinkedIn search
             actions.append(f"Searched LinkedIn for '{company.name}' and applied to relevant roles")
 
             if phone:

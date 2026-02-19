@@ -1,6 +1,6 @@
 ================================================================================
 APPLIED COMPANIES REPORT
-Date: 2026-02-18 01:32:21
+Date: 2026-02-19 01:55:34
 Location: Mangadu, Chennai (Fallback)
 Radius: 25.0 km
 Total Applied: 57
@@ -71,7 +71,7 @@ Total Applied: 57
     Email: info@quadkast.com
     Website: http://quadkast.com/
     ACTIONS TAKEN:
-    - Sent email to info@quadkast.com with resume attached (CC: abdulfaheemasd@gmail.com)
+    - Simulated email to info@quadkast.com (CC: abdulfaheemasd@gmail.com) - Real email requires configured credentials
     - Visited website http://quadkast.com/ and checked careers page
     - Searched LinkedIn for 'Quadkast Technologies' and applied to relevant roles
 
@@ -205,7 +205,7 @@ Total Applied: 57
     Email: ask@fsftn.org
     Website: https://fsftn.org
     ACTIONS TAKEN:
-    - Sent email to ask@fsftn.org with resume attached (CC: abdulfaheemasd@gmail.com)
+    - Simulated email to ask@fsftn.org (CC: abdulfaheemasd@gmail.com) - Real email requires configured credentials
     - Visited website https://fsftn.org and checked careers page
     - Searched LinkedIn for 'Free Software Foundation Tamil Nadu (FSFTN)' and applied to relevant roles
 
@@ -274,7 +274,7 @@ Total Applied: 57
     Website: https://www.blazedream.com/
     Phone: +914442047468
     ACTIONS TAKEN:
-    - Sent email to reach@blazedream.com with resume attached (CC: abdulfaheemasd@gmail.com)
+    - Simulated email to reach@blazedream.com (CC: abdulfaheemasd@gmail.com) - Real email requires configured credentials
     - Visited website https://www.blazedream.com/ and checked careers page
     - Searched LinkedIn for 'Blaze Dream Technologies Pvt Ltd' and applied to relevant roles
 
@@ -294,7 +294,7 @@ Total Applied: 57
     Email: admin@cewit.org.in
     Phone: +91-44-66469201
     ACTIONS TAKEN:
-    - Sent email to admin@cewit.org.in with resume attached (CC: abdulfaheemasd@gmail.com)
+    - Simulated email to admin@cewit.org.in (CC: abdulfaheemasd@gmail.com) - Real email requires configured credentials
     - Searched LinkedIn for 'Centre of Excellence in Wireless Technology' and applied to relevant roles
 
 --------------------------------------------------------------------------------
@@ -393,7 +393,7 @@ Total Applied: 57
     Website: http://zeqube.com
     Phone: 09600112861
     ACTIONS TAKEN:
-    - Sent email to support@zeqube.com with resume attached (CC: abdulfaheemasd@gmail.com)
+    - Simulated email to support@zeqube.com (CC: abdulfaheemasd@gmail.com) - Real email requires configured credentials
     - Visited website http://zeqube.com and checked careers page
     - Searched LinkedIn for 'ZeQube Technologies' and applied to relevant roles
 
@@ -441,7 +441,7 @@ Total Applied: 57
     Email: sales@donracks.com
     Website: https://donracks.com
     ACTIONS TAKEN:
-    - Sent email to sales@donracks.com with resume attached (CC: abdulfaheemasd@gmail.com)
+    - Simulated email to sales@donracks.com (CC: abdulfaheemasd@gmail.com) - Real email requires configured credentials
     - Visited website https://donracks.com and checked careers page
     - Searched LinkedIn for 'TMTE Metal Tech Private Limited (DONRACKS)' and applied to relevant roles
 
