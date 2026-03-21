@@ -1,0 +1,4 @@
+duckduckgo-search
+pandas
+playwright
+requests
