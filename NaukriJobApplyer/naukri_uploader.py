@@ -45,7 +45,11 @@ from playwright.sync_api import (
 #  Constants — File paths & URLs
 # ──────────────────────────────────────────────
 
-BASE_DIR = Path(__file__).resolve().parent
+if getattr(sys, 'frozen', False):
+    BASE_DIR = Path(sys.executable).parent
+else:
+    BASE_DIR = Path(__file__).resolve().parent
+
 CONFIG_FILE = BASE_DIR / "config.ini"
 RESUME_DIR = BASE_DIR / "resume"
 
