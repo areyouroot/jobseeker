@@ -17,6 +17,9 @@ REM Build the executable
 echo Running PyInstaller...
 pyinstaller --onefile --windowed --icon=NONE naukri_uploader.py
 
+REM Copy the executable to the main directory
+copy /Y dist\naukri_uploader.exe .\naukri_uploader.exe >nul
+
 echo.
-echo Build complete! The executable can be found in the "dist" folder.
+echo Build complete! The executable has been copied to the main folder.
 pause
