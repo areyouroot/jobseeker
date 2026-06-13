@@ -1,1 +1,5 @@
 node_modules/*
+__pycache__/
+logs/
+NaukriJobApplyer/naukri_uploader.spec
+NaukriJobApplyer/build/naukri_uploader/
