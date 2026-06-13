@@ -1,0 +1,17 @@
+[naukri]
+email = email@email.com
+password = password123
+
+[settings]
+# Path to the resume file inside the resume folder
+resume_filename = resume.pdf
+
+# Browser settings
+slow_mo = 100
+# Timeout in milliseconds for waiting on elements
+timeout = 30000
+
+[schedule]
+# Comma-separated times (24-hour format HH:MM) to upload the resume each day.
+# The script will upload at each of these times while it is running.
+times = 09:00, 13:00, 16:00, 23:43
