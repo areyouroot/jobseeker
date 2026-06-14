@@ -467,6 +467,10 @@ class NaukriUploaderApp:
         self._update_status_indicator()
         self._start_config_watcher()
 
+        # Check for command line arguments to auto-start
+        if len(sys.argv) > 1 and sys.argv[1] in ("--start", "-s"):
+            self.root.after(150, self._on_start)
+
     # ──────────────────────────────────────
     #  UI Construction
     # ──────────────────────────────────────

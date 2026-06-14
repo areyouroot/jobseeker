@@ -1,7 +1,5 @@
 @echo off
-REM ============================================
-REM   Naukri Resume Uploader - Run Script
-REM ============================================
+cd /d "x:\git\jobseeker\NaukriJobApplyer"
 
 echo.
 echo ===============================================
@@ -19,7 +17,7 @@ if not exist "venv\Scripts\activate.bat" (
 
 REM Activate venv and run the script
 call venv\Scripts\activate.bat
-python naukri_uploader.py
+python naukri_uploader.py --start
 
 echo.
 pause
