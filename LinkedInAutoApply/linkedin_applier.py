@@ -1,6 +1,6 @@
 """
 =============================================================
-  Naukri.com Resume Auto-Uploader — Main Runner
+  LinkedIn Easy Apply Auto-Applier — Main Runner
 =============================================================
 
 This acts as the application's entry point, loading the OOP modules
@@ -20,12 +20,12 @@ if venv_site_packages.exists() and str(venv_site_packages) not in sys.path:
     sys.path.insert(0, str(venv_site_packages))
 
 from src.config import ConfigLoader
-from src.gui import NaukriUploaderApp
+from src.gui import LinkedInApplierApp
 
 def main():
     """Load configuration and execute the main desktop GUI application loop."""
     cfg = ConfigLoader.load()
-    app = NaukriUploaderApp(cfg)
+    app = LinkedInApplierApp(cfg)
     app.run()
 
 if __name__ == "__main__":

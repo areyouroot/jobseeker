@@ -3,3 +3,4 @@ __pycache__/
 logs/
 NaukriJobApplyer/naukri_uploader.spec
 NaukriJobApplyer/build/naukri_uploader/
+LinkedInAutoApply/config.ini

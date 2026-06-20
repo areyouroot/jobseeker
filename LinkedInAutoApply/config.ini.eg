@@ -1,0 +1,39 @@
+[linkedin]
+email = your email
+password = password
+
+[settings]
+# Path to the resume file inside the resume folder
+resume_filename = resume.pdf
+
+# Browser settings
+slow_mo = 100
+# Timeout in milliseconds for waiting on elements
+timeout = 30000
+# Delay in seconds after applying to a job
+apply_delay = 60
+# Maximum number of applications per session
+max_applications = 25
+
+[schedule]
+# Comma-separated times (24-hour format HH:MM) to run the applier each day.
+# The script will run at each of these times while it is running.
+times = 09:00, 13:00, 16:00, 23:43
+
+[telegram]
+# Telegram Bot integration for question relaying.
+# Create a bot via @BotFather and get the token.
+# Get your chat_id by messaging @userinfobot on Telegram.
+bot_token = your token
+chat_id = your id
+
+[llm]
+# URL of your local LLM model (e.g. n8n workflow or local chat API)
+url = http://gcserver:5678/webhook/chat
+
+[filters]
+# Optional LinkedIn search filters (leave blank to skip)
+# location = India
+# experience_level = Entry level, Associate
+# date_posted = Past week
+# remote = Remote

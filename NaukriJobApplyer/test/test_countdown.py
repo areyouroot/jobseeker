@@ -10,7 +10,6 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-import naukri_uploader
 
 
 class TestCountdownFormatting(unittest.TestCase):

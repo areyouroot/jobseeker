@@ -1,6 +1,6 @@
-# 🚀 Naukri.com Resume Auto-Uploader
+# 🚀 Naukri.com Resume Auto-Uploader & Job Applier
 
-Automatically log in to your [Naukri.com](https://www.naukri.com) account and upload/update your resume — powered by **Python** and **Playwright**.
+Automatically log in to your [Naukri.com](https://www.naukri.com) account, upload/update your resume, extract job keywords using a local LLM, and apply to jobs automatically — powered by **Python** and **Playwright**.
 
 The browser runs in **visible mode** so you can watch every step as it happens.
 
@@ -15,6 +15,9 @@ The browser runs in **visible mode** so you can watch every step as it happens.
   - [Option A — Using setup.bat (Recommended)](#option-a--using-setupbat-recommended)
   - [Option B — Manual Setup](#option-b--manual-setup)
 - [Configuration](#-configuration)
+  - [Config Fields Explained](#config-fields-explained)
+  - [Setting Up Telegram Bot Integration (Optional)](#setting-up-telegram-bot-integration-optional)
+  - [Setting Up LLM Integration (Optional)](#setting-up-llm-integration-optional)
 - [Adding Your Resume](#-adding-your-resume)
 - [Running the Script](#-running-the-script)
   - [Option A — Using run.bat](#option-a--using-runbat)
@@ -28,11 +31,20 @@ The browser runs in **visible mode** so you can watch every step as it happens.
 ## ✨ Features
 
 - **Visible Browser** — Launches a real Chromium window; nothing runs hidden.
-- **Config-driven** — Credentials and settings live in `config.ini`, not hard-coded.
+- **Config-driven** — Credentials, schedules, settings, and delays live in `config.ini`.
+- **Hot-reloading Schedules** — Edits to schedule times in `config.ini` are picked up live without restarting the application!
+- **Recruiter NVites Checker** — Automatically checks for pending recruiter invitations and accepts them.
+- **Local LLM Keyword Extraction** — Uses a local LLM chat webhook to analyze your PDF resume and extract relevant job search keywords.
+- **Automated Job Search & Application**:
+  - Searches Naukri for extracted keywords.
+  - Applies to up to **3 jobs per keyword** (maximum of 15 successful applications per session).
+  - Handles external career site redirects by forwarding links to your Telegram and skipping.
+  - Relays pre-screening questions to Telegram with a **2-hour timeout**.
+  - Automatically captures screenshots of the browser on failure and posts them to your Telegram.
+- **Configurable Delays** — Set pause timers after uploading the resume and after applying to each job directly in the configuration.
 - **Resume folder** — Keep your resume(s) organised in a dedicated `resume/` directory.
 - **Error handling** — Graceful timeouts, login-failure detection, and manual-fallback prompts.
 - **Anti-detection basics** — Uses a realistic user-agent string and disables the `AutomationControlled` flag.
-- **One-click setup & run** — Batch files for Windows so you don't need to memorise commands.
 
 ---
 
@@ -53,21 +65,41 @@ The browser runs in **visible mode** so you can watch every step as it happens.
 
 ## 📁 Project Structure
 
+The project has been refactored into a highly clean, modular, and easy-to-read Object-Oriented Programming (OOP) design adhering to single-responsibility principles:
+
 ```
-nakukriTest/
+NaukriJobApplyer/
 │
-├── config.ini              # Your Naukri credentials & settings
-├── naukri_uploader.py      # Main automation script (Playwright)
+├── config.ini              # Your Naukri credentials, schedules & settings
+├── config.ini-eg           # Template example config
+├── naukri_uploader.py      # Main entry point runner script
 ├── requirements.txt        # Python package dependencies
-├── setup.bat               # One-time setup: venv + install + browser
-├── run.bat                 # Run the uploader with one click
+├── setup.bat               # One-time environment setup batch script
+├── run.bat                 # Shortcut launcher for the application
 ├── README.md               # This file
 │
-├── resume/                 # ← Place your resume PDF here
+├── resume/                 # Place your resume PDF/Doc here
 │   └── resume.pdf
 │
-└── venv/                   # Python virtual environment (auto-created)
-    └── ...
+└── src/                    # Core OOP package classes
+    ├── __init__.py         # Package initializer
+    ├── colors.py           # Centralized hex color palette (Colors)
+    ├── widgets.py          # Custom tkinter widgets (HoverButton)
+    ├── config.py           # Configuration loading & validation logic (ConfigLoader)
+    ├── llm_client.py       # PDF parser & LLM webhook communicator (LLMClient)
+    ├── telegram_bot.py     # Telegram Bot communicator, supports photo uploads (TelegramBot)
+    │
+    ├── automation/         # Browser automation components
+    │   ├── browser_controller.py# Playwright browser manager (NaukriBrowser)
+    │   ├── session.py      # Naukri login workflow handler (NaukriSession)
+    │   ├── uploader.py     # Resume profile upload logic (ResumeUploader)
+    │   ├── nvite_handler.py# Invites scanner and handler (NViteHandler)
+    │   ├── screening_handler.py # Screen question modal handler (ScreeningHandler)
+    │   └── job_applier.py  # Keywords job search and apply automation (JobApplier)
+    │
+    ├── orchestrator.py     # Integrates login, upload, and checks (UploadOrchestrator)
+    ├── scheduler.py        # Background scheduler clock thread (UploadScheduler)
+    └── gui.py              # Tkinter GUI interface, dashboard, and logs (NaukriUploaderApp)
 ```
 
 ---
@@ -79,7 +111,7 @@ nakukriTest/
 1. **Double-click `setup.bat`** in the project folder.
 2. It will automatically:
    - Create a Python virtual environment (`venv/`)
-   - Install Playwright and its dependencies
+   - Install Playwright, `pypdf`, and other dependencies
    - Download the Chromium browser binary
 3. Wait for the "Setup complete!" message.
 
@@ -101,13 +133,11 @@ pip install -r requirements.txt
 playwright install chromium
 ```
 
-> **Tip:** You only need to do this once. After setup, jump straight to [Running the Script](#-running-the-script).
-
 ---
 
 ## ⚙️ Configuration
 
-Open **`config.ini`** in any text editor and fill in your real Naukri credentials:
+Open **`config.ini`** in any text editor and fill in your real Naukri credentials and preferences:
 
 ```ini
 [naukri]
@@ -115,27 +145,90 @@ email = your_actual_email@example.com
 password = your_actual_password
 
 [settings]
-# Name of the resume file inside the resume/ folder
 resume_filename = resume.pdf
-
-# Slow-motion delay (ms) between browser actions — higher = slower & easier to watch
 slow_mo = 100
-
-# Maximum wait time (ms) for any element to appear on the page
 timeout = 30000
+upload_delay = 10
+apply_delay = 60
+
+[schedule]
+# Comma-separated times in 24-hour HH:MM format
+times = 09:00, 13:00, 16:00
+
+[telegram]
+bot_token = YOUR_TELEGRAM_BOT_TOKEN
+chat_id = YOUR_TELEGRAM_CHAT_ID
+
+[llm]
+url = http://localhost:5678/webhook/chat
 ```
 
 ### Config Fields Explained
 
-| Field              | Section    | Description                                                                 |
-| ------------------ | ---------- | --------------------------------------------------------------------------- |
-| `email`            | `[naukri]` | Your Naukri login email or username                                         |
-| `password`         | `[naukri]` | Your Naukri account password                                                |
-| `resume_filename`  | `[settings]` | The exact filename of your resume inside the `resume/` folder            |
-| `slow_mo`          | `[settings]` | Milliseconds to pause between each browser action (default: `100`)       |
-| `timeout`          | `[settings]` | Max wait time in ms for page elements to load (default: `30000` = 30 sec)|
+| Field | Section | Description |
+| --- | --- | --- |
+| `email` | `[naukri]` | Your Naukri login email or username |
+| `password` | `[naukri]` | Your Naukri account password |
+| `resume_filename` | `[settings]`| The exact filename of your resume inside the `resume/` folder |
+| `slow_mo` | `[settings]`| Milliseconds to pause between each browser action (default: `100`) |
+| `timeout` | `[settings]`| Max wait time in ms for page elements to load (default: `30000` = 30 sec)|
+| `upload_delay` | `[settings]`| Delay in seconds to sleep after uploading the resume (default: `10` sec)|
+| `apply_delay` | `[settings]`| Delay in seconds to sleep after applying to each job (default: `60` sec)|
+| `times` | `[schedule]`| Comma-separated 24-hour timestamps to run the uploads/applications |
+| `bot_token` | `[telegram]`| (Optional) HTTP API bot token from Telegram's `@BotFather` |
+| `chat_id` | `[telegram]`| (Optional) Your personal Telegram numeric chat ID from `@userinfobot` |
+| `url` | `[llm]` | (Optional) URL of your local LLM model/webhook for keyword extraction |
 
-> ⚠️ **Security Note:** `config.ini` contains your password in plain text. Do **not** commit it to a public repository. Add it to `.gitignore` if using Git.
+> ⚠️ **Security Note:** `config.ini` contains your password in plain text. Do **not** commit it to a public repository. It is included in `.gitignore` by default.
+
+---
+
+### Setting Up Telegram Bot Integration (Optional)
+
+The uploader includes a Telegram integration to notify you of actions, relay recruiter questions, and send browser screenshots on failure.
+
+#### Step-by-Step Setup Guide
+
+1. **Create a Telegram Bot**:
+   - Open Telegram and search for the official **@BotFather** bot.
+   - Send `/newbot` to start the bot creation process.
+   - Follow the prompts to specify a name and a username for your bot.
+   - Copy the generated **HTTP API Token** (e.g., `123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ`). This is your `bot_token`.
+
+2. **Get Your Personal Chat ID**:
+   - Search for the **@userinfobot** or **@GetIdsBot** on Telegram.
+   - Send `/start` or any text message to it.
+   - The bot will reply with your personal **Id** (a long number, e.g., `987654321`). This is your `chat_id`.
+
+3. **Start the Conversation with Your Bot**:
+   - Navigate to your custom bot's chat interface (using the link provided by `@BotFather` or searching its username in Telegram).
+   - Press the **Start** button or send `/start` to authorize the bot to send you messages. **If you skip this step, the bot will not be able to message you.**
+
+4. **Insert values in `config.ini`**:
+   - Add your bot token and chat ID to the `[telegram]` section of your configuration file.
+
+---
+
+### Setting Up LLM Integration (Optional)
+
+If the `[llm]` section's `url` is configured in `config.ini`, the application will perform the job search and apply workflow.
+
+#### How It Works
+1. **Resume Analysis**: The app reads your resume PDF text using `pypdf`.
+2. **LLM Query**: It sends a POST request to your LLM webhook containing the resume and matching the required structure:
+   ```json
+   [
+     {
+       "systemMessage": "You are a job searching agent",
+       "prompt": "Extract job keywords..."
+     }
+   ]
+   ```
+3. **Keyword Extraction**: The LLM analyzes your resume and responds with a list of search keywords.
+4. **Job Application**: The app searches Naukri for each keyword, visits job description pages, clicks "Apply", and sleeps `apply_delay` seconds after each successful application.
+5. **Screening Questions Relay**: If the application requires screening questions, they are sent to your Telegram chat. The app will wait up to **2 hours** for you to respond before skipping.
+6. **External Redirects**: If the job redirects to an external company website, the app captures the link, sends it to your Telegram, and proceeds to the next job.
+7. **Failure Screenshots**: If any step in the login, upload, or application flows fails, the browser automatically takes a screenshot and uploads it to your Telegram.
 
 ---
 
@@ -146,9 +239,6 @@ timeout = 30000
    ```ini
    resume_filename = resume.pdf
    ```
-3. Supported formats: `.pdf`, `.doc`, `.docx` (whatever Naukri accepts).
-
-> To update your resume later, simply replace the file in `resume/` and run the script again.
 
 ---
 
@@ -157,8 +247,8 @@ timeout = 30000
 ### Option A — Using `run.bat`
 
 1. **Double-click `run.bat`** in the project folder.
-2. A Chromium browser window will open and you can watch the automation.
-3. After the resume is uploaded, the script will wait for you to **press Enter** before closing the browser.
+2. The desktop control panel application will launch.
+3. Click **▶ Start** to activate scheduled runs (it also fires an immediate verification upload). Or click **⚡ Run Now** to execute a manual upload/search cycle immediately.
 
 ### Option B — Running Manually
 
@@ -169,76 +259,6 @@ timeout = 30000
 # Run the script
 python naukri_uploader.py
 ```
-
-### What Happens When You Run It
-
-```
-Step 1  →  Browser launches (visible Chromium window)
-Step 2  →  Navigates to https://www.naukri.com/nlogin/login
-Step 3  →  Enters your email and password
-Step 4  →  Clicks the Login button
-Step 5  →  Navigates to your profile page
-Step 6  →  Finds the resume upload input and uploads your file
-Step 7  →  Waits for you to press Enter, then closes the browser
-```
-
----
-
-## 🔍 Troubleshooting
-
-### "Python is not installed or not in PATH"
-
-- Install Python from [python.org](https://www.python.org/downloads/).
-- During installation, **check the box** that says "Add Python to PATH".
-- Restart your terminal after installation.
-
-### "Config file not found"
-
-- Make sure `config.ini` exists in the same folder as `naukri_uploader.py`.
-- It must not be renamed or moved.
-
-### "Please update config.ini with your actual Naukri credentials"
-
-- Open `config.ini` and replace the placeholder email/password with your real credentials.
-
-### "Resume file not found"
-
-- Ensure your resume file is inside the `resume/` folder.
-- Check that the filename in `config.ini → resume_filename` matches exactly (case-sensitive).
-
-### Login fails or times out
-
-- Naukri may show a CAPTCHA or OTP challenge. The script keeps the browser open so you can **complete it manually**.
-- If Naukri changes their page layout, the selectors in the script may need updating.
-- Try increasing `timeout` in `config.ini` if your internet is slow.
-
-### "Virtual environment not found"
-
-- Run `setup.bat` first, or create the venv manually (see [Manual Setup](#option-b--manual-setup)).
-
-### Browser doesn't open
-
-- Make sure Chromium was installed: run `.\venv\Scripts\playwright.exe install chromium`
-- Check your antivirus isn't blocking the Playwright browser.
-
----
-
-## ❓ FAQ
-
-**Q: Is this safe?**  
-A: The script runs a real browser on your machine. Your credentials are stored locally in `config.ini` and are never sent anywhere except to Naukri's own login page.
-
-**Q: Can I run this on a schedule?**  
-A: Yes! Use Windows Task Scheduler to run `run.bat` at a set time (e.g., daily). Note that the script waits for Enter at the end — you may want to remove that `input()` call for fully unattended runs.
-
-**Q: Does this work on Mac/Linux?**  
-A: The Python script (`naukri_uploader.py`) is cross-platform. The `.bat` files are Windows-only, but you can replicate them with simple shell scripts.
-
-**Q: What if Naukri changes their website?**  
-A: You may need to update the CSS selectors/locators in `naukri_uploader.py`. Open the browser's DevTools (F12) to inspect the current page structure.
-
-**Q: Can I upload a .docx instead of .pdf?**  
-A: Yes — just put the `.docx` file in the `resume/` folder and update `resume_filename` in `config.ini`.
 
 ---
 
