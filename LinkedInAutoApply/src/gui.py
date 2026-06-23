@@ -407,5 +407,6 @@ class LinkedInApplierApp:
         self.root.destroy()
 
     def run(self):
-        """Start the Tkinter main loop."""
+        """Start the Tkinter main loop and start the scheduler loop by default."""
+        self._on_start()
         self.root.mainloop()
